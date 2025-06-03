@@ -4,7 +4,7 @@ on: push
 
 jobs:
   super-lint:
-    name: Lint using super-linter
+    name: Lint code base
     runs-on: ubuntu-latest
 
     permissions:
@@ -17,9 +17,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Super-linter
-        uses: super-linter/super-linter@v5.7.2
+      - name: Run Super-linter
+        uses: github/super-linter@v3
         env:
+          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           IGNORE_GENERATED_FILES: true
           IGNORE_GITIGNORED_FILES: true
