@@ -1,9 +1,9 @@
-name: Lint using super-linter
+name: Super-linter
 
-on: [pull_request]
+on: push
 
 jobs:
-  lint:
+  super-lint:
     name: Lint using super-linter
     runs-on: ubuntu-latest
 
