@@ -13,15 +13,15 @@ jobs:
 
       - name: Run Super-Linter (Python Only)
         uses: github/super-linter/slim@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_PYTHON: true
-          VALIDATE_ALL_CODEBASE: true
-          DEFAULT_BRANCH: main
-          # Disable everything else
-          VALIDATE_CHECKOV: false
-          VALIDATE_GITLEAKS: false
-          VALIDATE_JSCPD: false
-          VALIDATE_MARKDOWN: false
-          VALIDATE_NATURAL_LANGUAGE: false
-          VALIDATE_YAML: false
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      VALIDATE_PYTHON: true
+      VALIDATE_ALL_CODEBASE: true
+      DEFAULT_BRANCH: main
+      # Disable everything else
+      VALIDATE_CHECKOV: false
+      VALIDATE_GITLEAKS: false
+      VALIDATE_JSCPD: false
+      VALIDATE_MARKDOWN: false
+      VALIDATE_NATURAL_LANGUAGE: false
+      VALIDATE_YAML: false
